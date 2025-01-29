@@ -43,6 +43,24 @@ function addAmigos() {
   console.log(amigos);
   //função para exibir nomes na tela
   listaExibir();
+  atualizarTitulo();
+}
+
+function atualizarTitulo() {
+  const nomesQuantidadeLista = amigos.length;
+  console.log(nomesQuantidadeLista);
+  // Atualiza o título da seção com base no número de amigos
+  if (nomesQuantidadeLista < 2) {
+    // Se faltarem amigos para o sorteio, mostra quantos faltam
+    document.querySelector(".section-title").innerHTML = `Adicione mais ${
+      2 - nomesQuantidadeLista
+    } amigo(s)`;
+  } else {
+    // Quando atingir 2 amigos, exibe que pode começar o sorteio
+    document.querySelector(
+      ".section-title"
+    ).innerHTML = `Digite o nome dos seus amigos`;
+  }
 }
 
 /*
