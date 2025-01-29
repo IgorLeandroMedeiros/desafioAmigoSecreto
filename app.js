@@ -26,6 +26,6 @@ function addAmigos() {
 
   //Resetar o campo de entrada para um novo nome e foca o input
   document.querySelector("#amigo").value = "";
-  document.querySelector("#amigo").focus;
+  document.querySelector("#amigo").focus();
   console.log(amigos);
 }
