@@ -67,6 +67,26 @@ function listaExibir() {
   }
 }
 
+function sortearAmigo() {
+  //teste - remover se for necessário
+  if (amigos.length === 0) {
+    alert("Não há amigos para sortear");
+    return;
+  } else if (amigos.length < 2) {
+    alert("É necessario 2 amigos para iniciar o sorteio");
+    return;
+  }
+  let RandomIndex = Math.floor(Math.random() * amigos.length);
+  console.log(amigos[RandomIndex]);
+
+  //armazena o resultado de RandomIndex
+  let amigoSorteado = amigos[RandomIndex];
+  //Exibe na tela o amigo sorteado
+  document.querySelector(
+    "#resultado"
+  ).innerHTML = `O amigo secreto sorteado é : ${amigoSorteado}`;
+}
+
 //Adicionar confirmação de envio via teclado
 const InputAmigo = document.querySelector("#amigo");
 //add event listener para o evento de teclado
