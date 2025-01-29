@@ -37,7 +37,7 @@ function exibirListaDeAmigos() {
 
   let listaAmigos = document.querySelector("#listaAmigos");
 
-  //Limpar a lista de amigos apos a add de um nome
+  //Limpar a lista de amigos apos add um nome
   listaAmigos.innerHTML = "";
   //loop para percorrer o array e a criação de um <li> para cada valor nome
 
@@ -47,3 +47,36 @@ function exibirListaDeAmigos() {
     listaAmigos.appendChild(li); ///adicionar o li na lista
   }
 }
+
+function sortearAmigo() {
+  //verifica se tem amigos na lista
+
+  if (amigos.length === 0) {
+    exibirTextoNaTela(".section-title", "Não tem amigos para sortear");
+    return;
+  }
+  const RandomIndex = Math.floor(Math.random() * amigos.length);
+  const amigoSorteado = amigos[RandomIndex];
+  console.log(amigoSorteado);
+  exibirTextoNaTela("#resultado", `O amigo sorteado foi: ${amigoSorteado}`);
+  exibirTextoNaTela(".section-title", `Parabéns ${amigoSorteado}`);
+  //limpar a lista de amigos
+  amigos = [];
+  limparListaNomes();
+  document.querySelector("#resetar").removeAttribute("disabled");
+}
+
+function limparListaNomes() {
+  let listaNomes = document.querySelector("#listaAmigos");
+  listaNomes.innerHTML = "";
+}
+
+function reiniciarSorteio() {
+  amigos = [];
+  limparListaNomes();
+  exibirTextoNaTela(".main-title", "Amigo Secreto");
+  exibirTextoNaTela(".section-title", "Digite o nome dos seus amigos");
+  exibirTextoNaTela("#resultado", "");
+  document.querySelector("#resetar").setAttribute("disabled", true);
+}
+document.querySelector("#resetar").addEventListener("click", reiniciarSorteio);
