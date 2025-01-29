@@ -29,3 +29,14 @@ function addAmigos() {
   document.querySelector("#amigo").focus();
   console.log(amigos);
 }
+
+//Atualizar lista e exibir na tela
+function exibirListaDeAmigos() {
+  //elemento html onde a lista sera exibida
+
+  let listaAmigos = document.querySelector("#listaAmigos");
+
+  //Limpar a lista de amigos apos a add de um nome
+  listaAmigos.innerHTML = "";
+  //loop para percorrer o array e a criação de um <li> para cada valor nome
+}
