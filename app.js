@@ -27,6 +27,7 @@ function addAmigos() {
 
   //add amigos no array
   amigos.push(amigoInput);
+  console.log(amigoInput);
   exibirTextoNaTela(
     ".section-title",
     `Amigo adicionado! insira o nome de outro amigo. 🙌`
@@ -61,6 +62,7 @@ function exibirListaDeAmigos() {
     let li = document.createElement("li");
     li.textContent = amigos[i]; //define o valor do conteudo de li com base no valor do array amigos
     listaAmigos.appendChild(li); ///adicionar o li na lista
+    console.log(amigos[i]);
   }
 }
 
@@ -79,6 +81,7 @@ function sortearAmigo() {
     return;
   }
   const RandomIndex = Math.floor(Math.random() * amigos.length);
+  console.log(RandomIndex);
   const amigoSorteado = amigos[RandomIndex];
   console.log(amigoSorteado);
   exibirTextoNaTela("#resultado", `O amigo sorteado foi: ${amigoSorteado}!`);
