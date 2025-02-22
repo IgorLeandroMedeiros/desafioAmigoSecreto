@@ -50,6 +50,16 @@ Sinta-se à vontade para contribuir com melhorias para este projeto. Para isso, 
 4. Faça um push para a branch (`git push origin feature/nova-feature`).
 5. Abra um Pull Request.
 
+## Conteúdo de Consulta/Material Usado
+
+### [Lógica de Programação: Mergulhe em Algoritmos com JavaScript](https://cursos.alura.com.br/course/logica-programacao-mergulhe-programacao-javascript)
+
+Este curso foi essencial para entender os conceitos básicos de lógica de programação e algoritmos usando JavaScript. As seções sobre estruturas de controle e manipulação de arrays foram especialmente úteis para implementar a lógica de adição de participantes e sorteio.
+
+### [Lógica de Programação: Funções e Listas](https://cursos.alura.com.br/course/logica-programacao-funcoes-listas)
+
+Este curso complementou o conhecimento adquirido no curso anterior, aprofundando-se em funções e listas. As lições sobre criação e manipulação de funções foram cruciais para desenvolver as funcionalidades de adicionar participantes, sortear e reiniciar o sorteio.
+
 ## Licença
 
 Este projeto está licenciado sob a licença MIT.
