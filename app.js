@@ -20,7 +20,7 @@ function addAmigos() {
   if (amigos.includes(amigoInput)) {
     exibirTextoNaTela(
       ".section-title",
-      `O nome ${amigoInput} já foi adicionado`
+      `O nome ${amigoInput} já foi adicionado! ❌`
     );
     return;
   }
@@ -29,7 +29,7 @@ function addAmigos() {
   amigos.push(amigoInput);
   exibirTextoNaTela(
     ".section-title",
-    `Amigo adicionado insira o nome de outro amigo`
+    `Amigo adicionado! insira o nome de outro amigo. 🙌`
   );
   // Verificar se atingiu o número mínimo de amigos para o sorteio
   // Só exibe a mensagem de quantidade mínima uma vez, quando o número de amigos atingir o mínimo
@@ -81,8 +81,8 @@ function sortearAmigo() {
   const RandomIndex = Math.floor(Math.random() * amigos.length);
   const amigoSorteado = amigos[RandomIndex];
   console.log(amigoSorteado);
-  exibirTextoNaTela("#resultado", `O amigo sorteado foi: ${amigoSorteado}`);
-  exibirTextoNaTela(".section-title", `Parabéns ${amigoSorteado}`);
+  exibirTextoNaTela("#resultado", `O amigo sorteado foi: ${amigoSorteado}!`);
+  exibirTextoNaTela(".section-title", `Parabéns ${amigoSorteado}!`);
   //limpar a lista de amigos
   amigos = [];
   limparListaNomes();
